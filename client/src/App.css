@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -26,6 +27,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: local(''), url('../public/assets/fonts/BebasNeue-Regular.ttf')
 }
 
 @keyframes App-logo-spin {
