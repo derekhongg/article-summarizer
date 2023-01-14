@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Flowbite } from 'flowbite-react';
-
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 function Register() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
