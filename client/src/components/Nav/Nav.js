@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import "../Nav/Nav.css";
+import Footer from "../footer/footer.component";
 
 function Nav() {
   return (
@@ -27,6 +28,7 @@ function Nav() {
         )}
       </Disclosure>
       <Outlet />
+      <Footer />
     </>
   );
 }
