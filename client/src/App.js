@@ -4,6 +4,7 @@ import Register from './components/Register/Register';
 import Login from './components/Login/login.component';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home.component.jsx'
+import Summarize from './components/Summarize/Summarize';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </Route>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/summarize" element={<Summarize/>}/>
         </Routes>
       </BrowserRouter>
     </div>
