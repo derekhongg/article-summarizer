@@ -29,15 +29,15 @@ function Login() {
 
   return (
     <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      //   maxHeight: "100vh",
+      // }}
       className="animate-reveal"
     >
-      <section className="dark:bg-gray-900">
+      <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -126,11 +126,16 @@ function Login() {
               </form>
             </div>
           </div>
-        </div>
-        <div style={{ marginTop: "20px", fontFamily: "Bebas Neue", fontSize: "20px"}} className='hover'>
-          <a href="/">
-            Learn more about Sum-Ai
-          </a>
+          <div
+            style={{
+              marginTop: "20px",
+              fontFamily: "Bebas Neue",
+              fontSize: "20px",
+            }}
+            className="hover"
+          >
+            <a href="/">Learn more about Sum-Ai</a>
+          </div>
         </div>
       </section>
     </div>
