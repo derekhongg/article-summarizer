@@ -6,6 +6,7 @@
   animation: reveal 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
 }
 
+
 //   .animate-first {
 //     -webkit-animation-delay: 0;
 //        -moz-animation-delay: 0;
@@ -104,4 +105,8 @@
 .hover:hover {
     transform: translateY(-2px);
     color: red;
+}
+
+#sign-in-title {
+  font-family: "Bebas Neue";
 }
