@@ -28,6 +28,8 @@ function Login() {
   };
 
   return (
+    <div style={{overflowY: "hidden"}}>
+
     <div
       // style={{
       //   display: "flex",
@@ -138,6 +140,7 @@ function Login() {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 }
