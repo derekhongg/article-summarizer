@@ -7,7 +7,7 @@ import Home from './Pages/Home/home.component.jsx'
 
 function App() {
   return (
-    <div className="App bg-gray-50">
+    <div className="App bg-gray-50 animate-reveal">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Nav/>}>

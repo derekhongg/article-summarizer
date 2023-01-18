@@ -1,0 +1,27 @@
+.text-white{
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    font-weight:400;
+    letter-spacing: 0.1em; 
+    color: rgb(31, 41, 55);
+}
+
+.nav {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in;
+    overflow: hidden;
+}
+
+.nav-bg {
+    background-color: rgba(0,0,0,.9);
+    
+    .text-white {
+        color: beige;
+    }
+    
+    
+}
