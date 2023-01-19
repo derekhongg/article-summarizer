@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import "../Nav/Nav.component.scss";
 import Footer from "../footer/footer.component";
-
 function Nav() {
 
   const [color, setColor] = useState(false);
@@ -20,7 +19,7 @@ function Nav() {
 
   return (
     <>
-      <Disclosure as="nav" className={`py-5 ${color ? 'nav nav-bg' : 'nav'}`}>
+      <Disclosure as="nav" className={`py-2 ${color ? 'nav nav-bg' : 'nav'}`}>
         {({ open }) => (
           <>
             <div className="px-2 sm:px-6 lg:px-8">

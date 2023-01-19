@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.styles.scss';
+import background from '../../images/minimal.png'
 
 const Header = () => {
   return (

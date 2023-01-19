@@ -1,0 +1,22 @@
+.scrolling-image-container {
+  overflow: hidden;
+}
+
+.scrolling-image {
+  background-repeat: repeat-x !important;
+  width: 23040px;
+  animation: slide 60s linear infinite;
+  object-fit: cover;
+  height: 80px;
+  background-size: contain;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-7680px, 0, 0); /* The image width */
+  }
+}
+/* https://css-tricks.com/books/fundamental-css-tactics/infinite-scrolling-background-image/ */
