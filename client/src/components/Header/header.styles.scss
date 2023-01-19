@@ -4,7 +4,11 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 60vw;
+  // background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed; /* <= This one */
+    
   .title {
     margin: 20px auto;
     font-size: 5rem;
@@ -31,16 +35,6 @@
       -1px -1px 10px #ddd;
   }
 
-  .distant {
-    color: rgb(30, 25, 25);
-    text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15),
-      0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .span {
-    font-size: 1.3em;
-    color: #aaa;
-  }
 
   .button {
     color: white;
@@ -66,5 +60,11 @@
     box-shadow: 0px 15px 20px rgba(213, 45, 16, 0.621);
     color: #fff;
     transform: translateY(-7px);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .header {
+    height: 40vh;
   }
 }
