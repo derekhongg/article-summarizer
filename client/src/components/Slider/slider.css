@@ -5,7 +5,7 @@
 .scrolling-image {
   background-repeat: repeat-x !important;
   width: 23040px;
-  animation: slide 60s linear infinite;
+  animation: slide 70s linear infinite;
   object-fit: cover;
   height: 80px;
   background-size: contain;
