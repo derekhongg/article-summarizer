@@ -11,16 +11,17 @@ function App() {
     <div className="App bg-gray-50 animate-reveal">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Nav/>}>
+          <Route path="/" element={<Nav />}>
             <Route index={true} element={<Home />} />
-            <Route path="/signup" element={<Register/>}/>
-            
+            <Route path="/signup" element={<Register />} />
+
             {/* for future article summaries */}
             {/* <Route path="article/*" element={<Shop />} /> */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/summarize" element={<Summarize />} />
           </Route>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/summarize" element={<Summarize/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>

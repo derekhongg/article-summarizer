@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Summarize() {
+
+    
+    
     return (
         <div>
-            <h1>
-                Summarize Your Article
-            </h1>
             <section class="text-gray-600 body-font relative">
                 <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-col text-center w-full mb-12">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Summarize Article</h1>
                         <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
                     </div>
                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -24,8 +24,13 @@ function Summarize() {
                             </div>
                             <div class="p-2 w-1/2">
                                 <div class="relative">
-                                    <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                                    <label for="paragraphs" class="leading-7 text-sm text-gray-600">Number of Paragraphs</label>
+                                    <select id="paragraphs" name="paragraphs" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="p-2 w-full">

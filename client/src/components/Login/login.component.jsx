@@ -136,7 +136,6 @@ function Login() {
             }}
             className="hover"
           >
-            <a href="/">Learn more about SumIt-Ai</a>
           </div>
         </div>
       </section>
