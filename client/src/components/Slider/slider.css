@@ -3,12 +3,14 @@
 }
 
 .scrolling-image {
-  background-repeat: repeat-x !important;
-  width: 23040px;
-  animation: slide 60s linear infinite;
-  object-fit: cover;
-  height: 80px;
+  background: url("../../images/logos.png") repeat-x;
+  width: 9102px;
+  /* 3,034.14 */
+  animation: slide 10s linear infinite;
+  object-fit: contain;
+  
   background-size: contain;
+  height: 100px;
 }
 
 @keyframes slide {
@@ -16,7 +18,7 @@
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-7680px, 0, 0); /* The image width */
+    transform: translate3d(-3034px, 0, 0); /* The image width */
   }
 }
 /* https://css-tricks.com/books/fundamental-css-tactics/infinite-scrolling-background-image/ */
