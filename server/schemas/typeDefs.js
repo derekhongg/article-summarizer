@@ -1,6 +1,9 @@
 const { gql } = require("apollo-server-express");
 
 // basically defining the models of our queries and what we want our response to look like
+// query: GET
+// mutators: POST, PUT, DELETE
+
 // ! is for required
 const typeDefs = gql`
   type User {
