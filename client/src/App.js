@@ -8,7 +8,8 @@ import Summarize from './components/Summarize/Summarize';
 
 function App() {
   return (
-    <div className="App bg-gray-50 animate-reveal">
+    <div className="App bg-gray-50 ">
+    <div className='animate-reveal'>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Nav />}>
@@ -17,13 +18,13 @@ function App() {
 
             {/* for future article summaries */}
             {/* <Route path="article/*" element={<Shop />} /> */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/summarize" element={<Summarize />} />
           </Route>
-
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
+    </div>
     </div>
   );
 }

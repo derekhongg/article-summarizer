@@ -6,7 +6,7 @@
   background: url("../../images/logos.png") repeat-x;
   width: 9102px;
   /* 3,034.14 */
-  animation: slide 10s linear infinite;
+  animation: slide 50s linear infinite;
   object-fit: contain;
   
   background-size: contain;
