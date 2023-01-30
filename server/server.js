@@ -15,7 +15,7 @@ const app = express();
 app.use(cookieParser());
 
 
-
+// context: passed to every route in graphql
 const server = new ApolloServer({
   typeDefs,
   resolvers,

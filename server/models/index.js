@@ -1,3 +1,3 @@
 const User = require('./user.model.js');
-
-module.exports = { User };
+const Summary = require('./summary.model')
+module.exports = { User, Summary };
