@@ -11,5 +11,5 @@ const SummarySchema = new mongoose.Schema({
     },
 }, {timestamps: true});
 
-const Summary= mongoose.model('Summary', SummarySchema);
+const Summary= mongoose.model('summary', SummarySchema);
 module.exports = Summary;

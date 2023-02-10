@@ -26,7 +26,8 @@ const typeDefs = gql`
   }
   
   input registerInput{
-    name: String
+    firstName: String
+    lastName: String
     email: String
     password: String
     confirmPassword: String

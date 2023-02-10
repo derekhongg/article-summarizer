@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const Summary = require("./summary.model")
 
 const UserSchema = new mongoose.Schema(
   {
@@ -10,12 +11,14 @@ const UserSchema = new mongoose.Schema(
         validator: (val) => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val),
         message: "Please enter a valid email",
       },
+      unique: true
     },
     password: {
       type: String,
       required: [true, "Password is required"],
       minlength: [8, "Password must be 8 characters or longer"],
     },
+    summaries: [Summary.schema]
   },
   { timestamps: true }
 );

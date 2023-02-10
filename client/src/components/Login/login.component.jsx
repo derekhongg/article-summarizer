@@ -5,30 +5,46 @@ import axios from "axios";
 
 import "./login.styles.scss";
 
+// graphql information
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth.js";
+
 function Login() {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const loginData = { userName, password };
-    try {
-      await axios.post("http://localhost:8000/api/user/login", loginData, {
-        withCredentials: true,
-      });
-      console.log("Login Successful!");
-      navigate(`/home/${userName}`);
-    } catch (error) {
-      setError(error.response.data.error);
-      navigate("/");
-    }
+  const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  const [formState, setFormState] = useState({
+    email: "", 
+    password: ""
+  })
+
+  const handleInputChange = ({ target: { name, value } }) => {
+    console.log(name, value);
+    setFormState({ ...formState, [name]: value });
   };
 
+  const handleSubmit = async(event) => {
+    event.preventDefault();
+    console.log("login");
+    try {
+      console.log(formState);
+      const { data } = await login({
+        variables: { ...formState },
+      });
+      console.log(data);
+      Auth.login(data.login.token);
+      console.log("hi");
+      console.log(Auth.getProfile());
+    } catch (err) {
+      window.alert("Unable to login. Please try again or register.");
+      console.error(err);
+    }
+  }
+
   return (
-    <div style={{overflowY: "hidden"}}>
+    <div class="loginContainer" style={{overflow: "hidden"}}>
 
     <div
       // style={{
@@ -65,6 +81,8 @@ function Login() {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
                     required=""
+                    value={formState.email}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div>
@@ -81,6 +99,8 @@ function Login() {
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required=""
+                    value={formState.password}
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div className="flex items-center justify-between">
